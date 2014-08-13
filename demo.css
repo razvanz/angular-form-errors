@@ -1,0 +1,34 @@
+.form-error { 
+    color: #c8272a;
+}
+
+.show-errors input.ng-invalid {
+    border: 1px solid #c8272a;
+}
+
+.form-errors {
+    display: none;
+}
+
+.show-errors .form-errors {
+    display: block;
+}
+
+body {
+    padding: 20px 0;
+}
+
+.btn:focus, .btn:active, .btn:focus:active { 
+    outline: 0 none; 
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+[ng-form] {
+    border: 1px solid #ededed;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 10px;
+}

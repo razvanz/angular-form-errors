@@ -1,0 +1,16 @@
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# OS X temporary files that should never be committed
+.DS_Store
+*.swp
+.localized

@@ -1,0 +1,27 @@
+{
+  "name": "angular-form-errors",
+  "version": "0.1.0",
+  "homepage": "https://github.com/blooderking/angular-form-errors.git",
+  "authors": [
+    "Cameron Spear <cameronspear@gmail.com>",
+    "Razvan Laurus <razvan.laurus@gmail.com>"
+  ],
+  "description": "A set of Angular directives to make it dead easy to display a list of form errors.",
+  "main": "formErrors.js",
+  "keywords": [
+    "angular",
+    "forms",
+    "errors",
+    "ngModel"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "demo.*",
+    "index.html"
+  ]
+}
