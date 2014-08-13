@@ -1,6 +1,8 @@
-# AngularJS Form Errors Directive
+# AngularJS Form Errors
 
 A set of directives to make it easier to get a list of form errors with the posibility of getting them anywhere in your app.
+
+**NOTE:** This plugin relays on angular `events` to get the errors broadcasted in the app. The event name used for broadcasting the errors is `FORM_ERRORS`, therefore any other usage of events with the same name may result in errors.
 
 ### Why?
 
@@ -88,7 +90,7 @@ app.controller('MainCtrl', function ($scope) {
 
 If the fields are empty (which are both required), then `<form-errors></form-errors>` would list the fields and their errors.
 
-Demo: http://blooderking.github.io/angular-form-errors-directive
+Demo: http://blooderking.github.io/angular-form-errors
 
 ## The Finer Points
 
@@ -210,28 +212,16 @@ If you thought the previous features were great wait for this part. Let's just s
 
 Because this directive is using `events` which are broadcasted down from the `$rootScope`, you can listen `$on` a `'FORM_ERRORS'` `event` anywhere in your app. Along with the event you will get a parameter `object` that contains the form name and the list of errors. Eg: `{'loginForm', [Error('username is required.')]}`.
 
-```html
-<form name="theForm" error-messages="{ required: 'needs to be non-blank.' }">
-  <!-- form goes here -->
-
-  <!-- this will override the default error messages
-       for all the errors in this <form-errors>  -->
-  <form-errors errors-tmpl="formErrors.html"></form-errors>
-</form>
-```
-By default the template used to display the errors looks like this:
-
-```html
-<ul class="form-errors">
-  <li class="form-error" ng-repeat="error in errors">
-    {{ error.message }}
-  </li>
-</ul>
+```javascript
+$scope.$on('FORM_ERRORS', function (event, data) {
+  if (data.errors !== [])
+    $scope.errors[data.formName] = data.errors;
+});
 ```
 
 ## Changelog
 
-- **v0.1.0** Basic functionality. Module [angular-form-errors-directive](https://github.com/CWSpear/angular-form-errors-directive) rewrote.
+- **v0.1.1** Basic functionality for form errors with angular `events`. Module [angular-form-errors-directive](https://github.com/CWSpear/angular-form-errors-directive) rewrote.
 
 ## Original module
 

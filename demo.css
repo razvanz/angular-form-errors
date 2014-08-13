@@ -1,4 +1,4 @@
-.form-error { 
+.form-error {
     color: #c8272a;
 }
 
@@ -6,20 +6,20 @@
     border: 1px solid #c8272a;
 }
 
-.form-errors {
-    display: none;
-}
-
 .show-errors .form-errors {
     display: block;
+}
+
+ul{
+  list-style: none;
 }
 
 body {
     padding: 20px 0;
 }
 
-.btn:focus, .btn:active, .btn:focus:active { 
-    outline: 0 none; 
+.btn:focus, .btn:active, .btn:focus:active {
+    outline: 0 none;
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
