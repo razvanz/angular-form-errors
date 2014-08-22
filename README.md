@@ -90,7 +90,7 @@ app.controller('MainCtrl', function ($scope) {
 
 If the fields are empty (which are both required), then `<form-errors></form-errors>` would list the fields and their errors.
 
-Demo: http://blooderking.github.io/angular-form-errors
+Demo: http://razvanz.github.io/angular-form-errors
 
 ## The Finer Points
 
